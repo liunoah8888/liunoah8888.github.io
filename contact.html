@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | FUZHOU HEART</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display",
+    "Helvetica Neue",Arial,sans-serif;
+    background:#f5f5f7;
+    color:#1d1d1f;
+}
+
+/* NAVBAR */
+
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(255,255,255,0.88);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid rgba(0,0,0,0.06);
+}
+
+.nav-container{
+    max-width:1400px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:16px 40px;
+}
+
+.logo{
+    font-size:26px;
+    font-weight:700;
+    color:#0489d1;
+    letter-spacing:1px;
+}
+
+.nav-links{
+    display:flex;
+    gap:35px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#1d1d1f;
+    font-size:15px;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#0489d1;
+}
+
+.active{
+    border-bottom:2px solid black;
+    padding-bottom:5px;
+}
+
+/* HERO */
+
+.hero{
+    height:55vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.35),
+    rgba(0,0,0,0.35)),
+    url("Fukushuen_Waterfall.JPG") center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.hero-content h1{
+    font-size:72px;
+    font-weight:700;
+    margin-bottom:18px;
+    letter-spacing:-2px;
+}
+
+.hero-content p{
+    font-size:24px;
+    opacity:0.92;
+}
+
+/* CONTACT SECTION */
+
+.contact-section{
+    max-width:1300px;
+    margin:100px auto;
+    padding:0 40px;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+}
+
+/* LEFT */
+
+.contact-info{
+    background:white;
+    border-radius:30px;
+    padding:55px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.05);
+}
+
+.contact-info h2{
+    font-size:42px;
+    margin-bottom:25px;
+    color:#0489d1;
+}
+
+.contact-info p{
+    font-size:18px;
+    line-height:1.9;
+    color:#555;
+    margin-bottom:20px;
+}
+
+.info-box{
+    margin-top:40px;
+}
+
+.info-item{
+    margin-bottom:30px;
+}
+
+.info-item h3{
+    font-size:20px;
+    margin-bottom:10px;
+    color:#1d1d1f;
+}
+
+.info-item span{
+    color:#666;
+    line-height:1.7;
+}
+
+/* RIGHT */
+
+.contact-form{
+    background:white;
+    border-radius:30px;
+    padding:55px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.05);
+}
+
+.contact-form h2{
+    font-size:42px;
+    margin-bottom:30px;
+    color:#0489d1;
+}
+
+.input-group{
+    margin-bottom:25px;
+}
+
+.input-group label{
+    display:block;
+    margin-bottom:10px;
+    font-weight:600;
+    color:#333;
+}
+
+.input-group input,
+.input-group textarea{
+    width:100%;
+    padding:18px;
+    border:none;
+    border-radius:18px;
+    background:#f5f5f7;
+    font-size:16px;
+    transition:0.3s;
+}
+
+.input-group input:focus,
+.input-group textarea:focus{
+    outline:none;
+    background:#fff;
+    box-shadow:0 0 0 3px rgba(4,137,209,0.2);
+}
+
+textarea{
+    resize:none;
+    height:180px;
+}
+
+.submit-btn{
+    width:100%;
+    padding:18px;
+    border:none;
+    border-radius:18px;
+    background:#0489d1;
+    color:white;
+    font-size:17px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.submit-btn:hover{
+    background:#036fa8;
+    transform:translateY(-2px);
+}
+
+/* MAP */
+
+.map-section{
+    max-width:1300px;
+    margin:0 auto 120px auto;
+    padding:0 40px;
+}
+
+.map-box{
+    overflow:hidden;
+    border-radius:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.06);
+}
+
+.map-box img{
+    width:100%;
+    display:block;
+}
+
+/* FOOTER */
+
+footer{
+    background:#ffffff;
+    border-top:1px solid rgba(0,0,0,0.08);
+    padding:35px;
+    text-align:center;
+    color:#666;
+    font-size:14px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1000px){
+
+.contact-section{
+    grid-template-columns:1fr;
+}
+
+.hero-content h1{
+    font-size:50px;
+}
+
+}
+
+@media(max-width:700px){
+
+.nav-container{
+    flex-direction:column;
+    gap:20px;
+}
+
+.nav-links{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:18px;
+}
+
+.hero-content h1{
+    font-size:40px;
+}
+
+.hero-content p{
+    font-size:18px;
+}
+
+.contact-info,
+.contact-form{
+    padding:35px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<div class="navbar">
+    <div class="nav-container">
+
+        <div class="logo">
+            FUZHOU HEART
+        </div>
+
+        <div class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="introduction.html">Introduction</a></li>
+        <li><a href="news.html">News & Events</a></li>
+        <li><a href="attraction.html">Attractions</a></li>
+        <li><a class="active" href="contact.html">Contact</a></li>
+        <li><a href="about.html">About Us</a></li>
+        </div>
+
+    </div>
+</div>
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+        <h1>Contact Us</h1>
+        <p>Connect with Fuzhou Heart</p>
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact-section">
+
+    <!-- LEFT -->
+
+    <div class="contact-info">
+
+        <h2>Get in Touch</h2>
+
+        <p>
+            Thank you for visiting FUZHOU HEART.
+            If you have questions about Fuzhou,
+            Chinese culture, tourism, or our website,
+            feel free to contact us anytime.
+        </p>
+
+        <div class="info-box">
+
+            <div class="info-item">
+                <h3>📍 Address</h3>
+                <span>
+                    Fuzhou Heart Cultural Centre<br>
+                    Gulou District, Fuzhou<br>
+                    Fujian Province, China
+                </span>
+            </div>
+
+            <div class="info-item">
+                <h3>📧 Email</h3>
+                <span>
+                    contact@fuzhouheart.com
+                </span>
+            </div>
+
+            <div class="info-item">
+                <h3>📞 Phone</h3>
+                <span>
+                    +64 021 126 1289
+                </span>
+            </div>
+
+            <div class="info-item">
+                <h3>🌐 Social Media</h3>
+                <span>
+                    Instagram · Facebook · WeChat
+                </span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- RIGHT -->
+
+    <div class="contact-form">
+
+        <h2>Send Message</h2>
+
+        <form action="https://formspree.io/f/xjgzgzod" method="post">
+
+            <div class="input-group">
+                <label>Your Name</label>
+                <input type="text" name="name" placeholder="Enter your name">
+            </div>
+
+            <div class="input-group">
+                <label>Email Address</label>
+                <input type="email" name="email" placeholder="Enter your email">
+            </div>
+
+            <div class="input-group">
+                <label>Subject</label>
+                <input type="text" placeholder="Message subject">
+            </div>
+
+            <div class="input-group">
+                <label>Your Message</label>
+                <textarea name="message" placeholder="Write your message here..."></textarea>
+            </div>
+
+            <button class="submit-btn">
+                Send Message
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<!-- MAP -->
+
+<section class="map-section">
+
+    <div class="map-box">
+        <img src="fuzhoumap.png" alt="Map of Fuzhou">
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+    © 2026 FUZHOU HEART · Designed in Apple Style
+</footer>
+
+</body>
+</html>

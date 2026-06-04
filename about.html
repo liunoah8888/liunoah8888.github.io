@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | FUZHOU HEART</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
+    "Helvetica Neue", sans-serif;
+    background:#f5f7fb;
+    color:#1d1d1f;
+}
+
+/* NAVIGATION */
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 60px;
+
+    background:rgba(255,255,255,0.75);
+    backdrop-filter:blur(20px);
+
+    background:rgba(4,137,209,0.88);
+    padding:10px 60px;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:40px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    font-size:15px;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav a:hover{
+    opacity:0.7;
+}
+
+.active{
+    border-bottom:2px solid white;
+    padding-bottom:5px;
+}
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo h1{
+    color: white;
+    font-size:24px;
+    letter-spacing:2px;
+}
+
+/* HERO */
+
+.hero{
+    height:70vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+    url("https://github.com/launoah444-spec/launoah444-spec.github.io/blob/main/Fuzhou_Mountain_Yantai.jpg?raw=true");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.hero-content h1{
+    font-size:72px;
+    font-weight:700;
+    letter-spacing:-2px;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:24px;
+    opacity:0.9;
+}
+
+/* MAIN */
+
+.container{
+    width:85%;
+    max-width:1200px;
+    margin:auto;
+    padding:100px 0;
+}
+
+/* INTRO */
+
+.intro{
+    text-align:center;
+    margin-bottom:90px;
+}
+
+.intro h2{
+    font-size:48px;
+    margin-bottom:25px;
+    color:#0489d1;
+}
+
+.intro p{
+    font-size:20px;
+    line-height:1.9;
+    color:#555;
+    max-width:900px;
+    margin:auto;
+}
+
+/* CARDS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:35px;
+    margin-bottom:100px;
+}
+
+.card{
+    background:white;
+    border-radius:28px;
+    overflow:hidden;
+    box-shadow:0 10px 35px rgba(0,0,0,0.08);
+    transition:0.35s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:240px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:35px;
+}
+
+.card-content h3{
+    font-size:28px;
+    margin-bottom:18px;
+    color:#0489d1;
+}
+
+.card-content p{
+    line-height:1.8;
+    color:#555;
+    font-size:17px;
+}
+
+/* TEAM */
+
+.team{
+    text-align:center;
+    margin-bottom:100px;
+}
+
+.team h2{
+    font-size:46px;
+    margin-bottom:50px;
+    color:#0489d1;
+}
+
+.team-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:35px;
+}
+
+.member{
+    background:white;
+    padding:40px;
+    border-radius:28px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.06);
+    transition:0.3s;
+}
+
+.member:hover{
+    transform:translateY(-8px);
+}
+
+.member img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:20px;
+}
+
+.member h3{
+    font-size:24px;
+    margin-bottom:10px;
+}
+
+.member p{
+    color:#777;
+    line-height:1.7;
+}
+
+/* MISSION */
+
+.mission{
+    background:linear-gradient(135deg,#0489d1,#0d5aa7);
+    color:white;
+    padding:80px;
+    border-radius:40px;
+    text-align:center;
+    margin-bottom:100px;
+}
+
+.mission h2{
+    font-size:48px;
+    margin-bottom:25px;
+}
+
+.mission p{
+    font-size:22px;
+    line-height:1.9;
+    max-width:900px;
+    margin:auto;
+}
+
+/* FOOTER */
+
+footer{
+    background:#0489d1;
+    color:white;
+    text-align:center;
+    padding:35px;
+    font-size:15px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+nav{
+    padding:18px 20px;
+}
+
+nav ul{
+    gap:18px;
+    flex-wrap:wrap;
+}
+
+.hero-content h1{
+    font-size:48px;
+}
+
+.hero-content p{
+    font-size:20px;
+}
+
+.intro h2,
+.team h2,
+.mission h2{
+    font-size:36px;
+}
+
+.mission{
+    padding:50px 30px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+    <div class="logo">
+        <h1>FUZHOU HEART</h1>
+    </div>
+
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="introduction.html">Introduction</a></li>
+        <li><a href="news.html">News & Events</a></li>
+        <li><a href="attraction.html">Attractions</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a class="active" href="about.html">About Us</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>About FUZHOU HEART</h1>
+        <p>Discovering the beauty, culture and history of Fuzhou.</p>
+    </div>
+</section>
+
+<!-- MAIN CONTENT -->
+
+<div class="container">
+
+    <!-- INTRO -->
+
+    <section class="intro">
+        <h2>Who We Are</h2>
+        <p>
+            FUZHOU HEART is a modern website project dedicated to introducing
+            the city of Fuzhou — the historic capital of Fujian Province, China.
+            Our goal is to showcase the city's culture, history, architecture,
+            language, and natural beauty through a clean and immersive digital experience.
+        </p>
+    </section>
+
+    <!-- CARDS -->
+
+    <section class="cards">
+
+        <div class="card">
+            <img src="Water-side_Performing_Stage_at_Yijin_Lane,_2019-09-29_20.jpg" alt="History">
+            <div class="card-content">
+                <h3>History</h3>
+                <p>
+                    Fuzhou has more than 2,200 years of history and was once
+                    the capital of several historical kingdoms and dynasties.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="Foochow_Bible_in_Characters.gif" alt="Culture">
+            <div class="card-content">
+                <h3>Culture</h3>
+                <p>
+                    From Min Opera to traditional architecture and tea culture,
+                    Fuzhou preserves a rich cultural heritage.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="Grand_canyon_in_Kuliang_(20170126151818).jpg" alt="Nature">
+            <div class="card-content">
+                <h3>Nature</h3>
+                <p>
+                    Mountains, rivers, hot springs and coastlines make Fuzhou
+                    one of the most beautiful cities in Southeast China.
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- TEAM -->
+
+    <section class="team">
+
+        <h2>Our Team</h2>
+
+        <div class="team-grid">
+
+            <div class="member">
+                <img src="id photo.jpg" alt="Team Member">
+                <h3>Noah Lau</h3>
+                <p>
+                    Founder & Web Designer
+                </p>
+            </div>
+
+            <div class="member">
+                <img src="profile-removebg-preview.png" alt="Team Member">
+                <h3>Creative Team</h3>
+                <p>
+                    Researching Fuzhou’s culture, history and visual identity.
+                </p>
+            </div>
+
+            <div class="member">
+                <img src="photo.jpg.jpg" alt="Team Member">
+                <h3>Development</h3>
+                <p>
+                    Building a clean Apple-style user experience for visitors.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- MISSION -->
+
+    <section class="mission">
+
+        <h2>Our Mission</h2>
+
+        <p>
+            We hope to help more people around the world understand the charm of
+            Fuzhou through elegant design, reliable information and modern web experiences.
+            FUZHOU HEART is more than a website —— it is a digital window into the city.
+        </p>
+
+    </section>
+
+</div>
+
+<!-- FOOTER -->
+
+<footer>
+    © 2026 FUZHOU HEART · Designed with Apple-style aesthetics
+</footer>
+
+</body>
+</html>

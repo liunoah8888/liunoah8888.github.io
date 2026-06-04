@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attraction | Fuzhou Heart</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#f5f5f7;
+    color:#1d1d1f;
+    line-height:1.9;
+}
+
+/* NAVIGATION */
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 60px;
+
+    background:rgba(255,255,255,0.75);
+    backdrop-filter:blur(20px);
+
+    border-bottom:1px solid rgba(0,0,0,0.08);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo img{
+    width:50px;
+    height:50px;
+}
+
+.logo h1{
+    font-size:24px;
+    letter-spacing:2px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#1d1d1f;
+    font-size:15px;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#0071e3;
+}
+
+.active{
+    border-bottom:2px solid black;
+    padding-bottom:5px;
+}
+
+/* HERO */
+.hero{
+    height:88vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)),
+    url("Fuzhou_skyline.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    color:white;
+}
+
+.hero-content h1{
+    font-size:130px;
+    font-weight:800;
+    letter-spacing:-5px;
+}
+
+.hero-content p{
+    font-size:32px;
+    font-weight:300;
+    margin-top:15px;
+}
+
+/* SECTION */
+.section{
+    padding:140px 10%;
+    text-align:center;
+}
+
+.section-title{
+    font-size:70px;
+    margin-bottom:20px;
+    font-weight:700;
+    letter-spacing:-2px;
+}
+
+.section-subtitle{
+    font-size:24px;
+    color:#666;
+    margin-bottom:50px;
+}
+.section button {
+    margin-bottom:20px;
+    padding:16px 40px;
+
+    border:none;
+    border-radius:50px;
+
+    background:black;
+    color:white;
+
+    font-size:18px;
+    cursor:pointer;
+
+    transition:0.3s;
+        }
+.section button:hover{
+    transform:scale(1.05);
+        }
+/* CARDS */
+.card-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:40px;
+}
+
+.card{
+    background:white;
+    border-radius:30px;
+    overflow:hidden;
+
+    box-shadow:0 10px 40px rgba(0,0,0,0.08);
+
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:40px;
+}
+
+.card-content h2{
+    font-size:32px;
+    margin-bottom:15px;
+}
+
+.card-content p{
+    color:#666;
+    line-height:1.8;
+    font-size:17px;
+}
+
+/* FEATURE SECTION */
+.feature{
+    height:90vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),
+    url('Fuzhou_Taixi_CBD.jpg');
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+    color:white;
+}
+
+.feature h1{
+    font-size:90px;
+    max-width:1000px;
+    line-height:1.1;
+}
+
+/* FOOTER */
+footer{
+    background:#111;
+    color:white;
+
+    text-align:center;
+
+    padding:60px;
+
+    font-size:15px;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+
+    nav{
+        padding:20px;
+    }
+
+    nav ul{
+        gap:20px;
+    }
+
+    .hero h1{
+        font-size:70px;
+    }
+
+    .hero p{
+        font-size:22px;
+    }
+
+    .section-title{
+        font-size:50px;
+    }
+
+    .feature h1{
+        font-size:50px;
+        padding:20px;
+    }
+
+}
+
+</style>
+</head>
+<body>
+<!-- NAVIGATION -->
+<nav>
+
+    <div class="logo">
+        <img src="Fuzhoulogo.png" alt="Fuzhou Logo">
+        <h1>FUZHOU HEART</h1>
+    </div>
+
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="introduction.html">Introduction</a></li>
+        <li><a href="news.html">News & Events</a></li>
+        <li><a class="active" href="attraction.html">Attractions</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About Us</a></li>
+    </ul>
+
+</nav>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <div class="hero-content">
+    <h1>Attraction</h1>
+    <p>Recorded Culture and History</p>
+    </div>
+</section>
+
+<!-- DISCOVER -->
+<section class="section" id="discover">
+
+    <h1 class="section-title">Discover Fuzhou</h1>
+
+    <p class="section-subtitle">
+        A city where tradition meets innovation.
+    </p>
+
+    <div class="card-grid">
+
+        <div class="card">
+            <img src="Xihu_Park.jpg">
+
+            <div class="card-content">
+                <h2>Fuzhou West Lake</h2>
+
+                <p>
+                    Fuzhou West Lake, located in the northwest of Fuzhou city, was excavated in 282 AD under the supervision of Mayor Yan Gao, primarily for farmland irrigation. It is named West Lake because it is west of Fuzhou city.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="Hongtang_lake.jpg">
+
+            <div class="card-content">
+                <h2>Huangtang Lake</h2>
+
+                <p>
+                    Huangtang is located in the northern part of Nantai Island, Cangshan District, Fuzhou City, China. Historically, Huangtang has a rich cultural atmosphere, especially as it was the birthplace of scholars such as Weng Zhengchun.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="Mountain_Yushan.jpg">
+
+            <div class="card-content">
+                <h2>Mount Yushan</h2>
+
+                <p>
+                    Yu Mountain is a hill located in Gulou District, Fuzhou City, China. It is said to have been named after a branch of the ancient Yu Yue clan who lived here. Yu Mountain has many historical sites, such as cliff inscriptions.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="Fuzhou_Xichan_Temple.jpg">
+
+            <div class="card-content">
+            <h2>Xichan Temple</h2>
+
+            <p>
+                Xichan Temple is located at the foot of Yishan Mountain in Gulou District, Fuzhou City. The lychee poetry gathering at Xichan Temple is also very famous. Xichan Temple has many branch temples in Fuzhou and Southeast Asia.
+            </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="Fuzhou_Jinshan_Temple.jpg">
+
+            <div class="card-content">
+            <h2>Jinshan Temple</h2>
+
+            <p>
+                Jinshan Temple, located on the Wulong River in Fuzhou, Fujian Province, is the only temple in Fuzhou built on water. Originally a stone hill on the Wulong River, it was named "Little Jinshan" because it resembled Jinshan Mountain in Zhenjiang, south of the Yangtze River. The temple is small, exquisite, and unique.
+            </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="Zhenhai_tower_front.jpg">
+
+            <div class="card-content">
+            <h2>Zhenhai Tower</h2>
+
+            <p>
+               Zhenhai Tower, located atop Pingshan Mountain in Gulou District, Fuzhou, China, is the northernmost landmark of the city. In the past, ships entering the city at night used it as a marker. To its west are seven stone vats arranged in the shape of the Big Dipper, symbolizing peace and good fortune for Fuzhou.
+            </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="Fuzhou_Xuefeng_Mount.jpg">
+
+            <div class="card-content">
+            <h2>Mount Xuefeng</h2>
+
+            <p>
+                Xuefeng Mountain is located in Dahu Township, Minhou County, Fuzhou City. It was renamed because "there is still snow on the mountaintop even in the summer moon".
+            </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="Flower_lane_church_2010.jpg">
+
+            <div class="card-content">
+            <h2>Huaxiang Church (Flower Lane Church)</h2>
+
+            <p>
+                Huaxiang Christian Church is a church in Fuzhou, China, founded in 1864 by the Methodist Episcopal Church. It is located in Huaxiang, near Dongjiekou in Gulou District, Fuzhou.
+            </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="Fuqing_Fuhua_Church.jpg">
+
+            <div class="card-content">
+                <h2>Fuhua Church</h2>
+
+                <p>
+                    Fuhua Church is a large church located in Fuqing City, Fuzhou City, and is currently the largest church in Fujian Province. In 1863, Robert Samuel Maclay, a Methodist missionary in Fuzhou, rented a house on Houpu Street as a preaching place. The church was built in 1884 and named Fuhua Church.
+                </p>
+            </div>
+        </div>
+    </div>
+
+</section>
+<!-- FOOTER -->
+<footer id="contact">
+    © 2026 FUZHOU HEART · Designed in Apple Style
+</footer>
+</body>
+</html>

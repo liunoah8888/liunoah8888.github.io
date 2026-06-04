@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>News | Fuzhou Heart</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    background:#f5f7fb;
+    color:#1d1d1f;
+}
+
+/* NAVBAR */
+
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    backdrop-filter:blur(18px);
+    background:rgba(255,255,255,0.78);
+    border-bottom:1px solid rgba(0,0,0,0.05);
+}
+
+.nav-container{
+    max-width:1400px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 60px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo img{
+    width:50px;
+    height:50px;
+    border-radius:12px;
+}
+
+.logo h1{
+    font-size:24px;
+    font-weight:600;
+    letter-spacing:1px;
+    color:#0b3d91;
+}
+
+.nav-links{
+    display:flex;
+    gap:35px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#1d1d1f;
+    font-size:15px;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#0489d1;
+}
+
+.active{
+    border-bottom:2px solid black;
+    padding-bottom:5px;
+}
+
+/* HERO */
+
+.hero{
+    height:88vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)),
+    url("Fuzhou_skyline.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    color:white;
+}
+
+.hero-content h1{
+    font-size:130px;
+    font-weight:700;
+    letter-spacing:-5px;
+}
+
+.hero-content p{
+    margin-top:18px;
+    font-size:32px;
+    opacity:0.92;
+}
+
+/* SECTION TITLE */
+
+.section-title{
+    max-width:1400px;
+    margin:90px auto 40px;
+    padding:0 40px;
+}
+
+.section-title h2{
+    font-size:3rem;
+    font-weight:700;
+    color:#0b3d91;
+    letter-spacing:-1px;
+}
+
+/* NEWS GRID */
+
+.news-grid{
+    max-width:1400px;
+    margin:auto;
+    padding:0 40px 100px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+    gap:40px;
+}
+
+/* CARD */
+
+.news-card{
+    background:white;
+    border-radius:32px;
+    overflow:hidden;
+    transition:0.4s;
+    box-shadow:
+    0 10px 30px rgba(0,0,0,0.06);
+}
+
+.news-card:hover{
+    transform:translateY(-10px);
+    box-shadow:
+    0 20px 50px rgba(0,0,0,0.12);
+}
+
+.news-image{
+    height:240px;
+    overflow:hidden;
+}
+
+.news-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:0.5s;
+}
+
+.news-card:hover img{
+    transform:scale(1.05);
+}
+
+.news-content{
+    padding:32px;
+}
+
+.news-tag{
+    display:inline-block;
+    background:#e8f2ff;
+    color:#0489d1;
+    padding:8px 16px;
+    border-radius:999px;
+    font-size:13px;
+    font-weight:600;
+    margin-bottom:20px;
+}
+
+.news-content h3{
+    font-size:2rem;
+    line-height:1.2;
+    margin-bottom:18px;
+    color:#1d1d1f;
+}
+
+.news-content p{
+    color:#6e6e73;
+    font-size:1.05rem;
+    line-height:1.8;
+    margin-bottom:28px;
+}
+
+.read-more{
+    text-decoration:none;
+    color:#0489d1;
+    font-weight:600;
+    font-size:15px;
+}
+
+.read-more:hover{
+    text-decoration:underline;
+}
+
+/* FEATURE ARTICLE */
+
+.feature{
+    max-width:1400px;
+    margin:20px auto 100px;
+    padding:0 40px;
+}
+
+.feature-box{
+    border-radius:40px;
+    overflow:hidden;
+    position:relative;
+    height:620px;
+    background:
+    linear-gradient(to right,
+    rgba(0,0,0,0.6),
+    rgba(0,0,0,0.2)),
+    url("Minjiang.jpg");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:flex-end;
+}
+
+.feature-content{
+    padding:70px;
+    color:white;
+    max-width:700px;
+}
+
+.feature-content span{
+    font-size:14px;
+    letter-spacing:2px;
+    opacity:0.85;
+}
+
+.feature-content h2{
+    margin-top:20px;
+    font-size:4rem;
+    line-height:1.05;
+}
+
+.feature-content p{
+    margin-top:25px;
+    font-size:1.2rem;
+    line-height:1.8;
+    opacity:0.92;
+}
+
+/* FOOTER */
+
+footer{
+    background:#0b3d91;
+    color:white;
+    text-align:center;
+    padding:40px;
+    font-size:15px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .nav-container{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero-content h1{
+        font-size:3rem;
+    }
+
+    .feature-content h2{
+        font-size:2.5rem;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+    <div class="nav-container">
+
+        <div class="logo">
+            <img src="Fuzhoulogo.png">
+            <h1>FUZHOU HEART</h1>
+        </div>
+
+        <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="introduction.html">Introduction</a>
+        <a class="active" href="news.html">News & Events</a>
+        <a href="attraction.html">Attractions</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About Us</a>
+        </div>
+
+    </div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+        <h1>News & Events</h1>
+        <p>Discover the culture, history and future of Fuzhou.</p>
+    </div>
+
+</section>
+
+<!-- FEATURE ARTICLE -->
+
+<section class="feature">
+
+    <div class="feature-box">
+
+        <div class="feature-content">
+
+            <span>FEATURED ARTICLE</span>
+
+            <h2>Minjiang River:
+            The Heartbeat of Fuzhou</h2>
+
+            <p>
+                Flowing through the city for thousands of years,
+                the Minjiang River shaped the culture,
+                trade and identity of Fuzhou.
+                Today it remains one of the city's
+                most iconic landscapes.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- SECTION TITLE -->
+
+<div class="section-title">
+    <h2>Latest News</h2>
+</div>
+
+<!-- NEWS GRID -->
+
+<section class="news-grid">
+
+    <!-- CARD 1 -->
+
+    <div class="news-card">
+
+        <div class="news-image">
+            <img src="Water-side_Performing_Stage_at_Yijin_Lane,_2019-09-29_20.jpg">
+        </div>
+
+        <div class="news-content">
+
+            <div class="news-tag">CULTURE</div>
+
+            <h3>Sanfang Qixiang
+            Welcomes Global Visitors</h3>
+
+            <p>
+                The famous historical district continues to attract
+                international tourists with its Ming and Qing dynasty
+                architecture and traditional Fuzhou culture.
+            </p>
+
+            <a href="#" class="read-more">
+                Read Article →
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- CARD 2 -->
+
+    <div class="news-card">
+
+        <div class="news-image">
+            <img src="Map_of_Fuzhou_Metro.svg.png">
+        </div>
+
+        <div class="news-content">
+
+            <div class="news-tag">CITY</div>
+
+            <h3>Fuzhou Metro Expansion
+            Accelerates Urban Growth</h3>
+
+            <p>
+                New metro lines are connecting districts faster than ever,
+                improving transportation and supporting sustainable
+                development across the city.
+            </p>
+
+            <a href="#" class="read-more">
+                Read Article →
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- CARD 3 -->
+
+    <div class="news-card">
+
+        <div class="news-image">
+            <img src="Grand_canyon_in_Kuliang_(20170126151818).jpg">
+        </div>
+
+        <div class="news-content">
+
+            <div class="news-tag">TRAVEL</div>
+
+            <h3>Why Guling Remains
+            Fuzhou's Summer Paradise</h3>
+
+            <p>
+                Located in the mountains above the city,
+                Guling offers cool weather, historical villas,
+                and breathtaking views during the summer season.
+            </p>
+
+            <a href="#" class="read-more">
+                Read Article →
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- CARD 4 -->
+
+    <div class="news-card">
+
+        <div class="news-image">
+            <img src="tea_moli.jpg">
+        </div>
+
+        <div class="news-content">
+
+            <div class="news-tag">HERITAGE</div>
+
+            <h3>The Story Behind
+            Fuzhou Jasmine Tea</h3>
+
+            <p>
+                Fuzhou jasmine tea is recognized worldwide for its
+                fragrance and craftsmanship, reflecting centuries
+                of local tea culture.
+            </p>
+
+            <a href="#" class="read-more">
+                Read Article →
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- CARD 5 -->
+
+    <div class="news-card">
+
+        <div class="news-image">
+            <img src="Minjiang_Evening.jpg">
+        </div>
+
+        <div class="news-content">
+
+            <div class="news-tag">LIFESTYLE</div>
+
+            <h3>Nightlife Along the
+            Min River Continues to Rise</h3>
+
+            <p>
+                Modern cafés, waterfront walks and skyline lighting
+                projects are transforming the evening atmosphere
+                of downtown Fuzhou.
+            </p>
+
+            <a href="#" class="read-more">
+                Read Article →
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- CARD 6 -->
+
+    <div class="news-card">
+
+        <div class="news-image">
+            <img src="20231022_Gulangyu_Xiaoqu,_Fuzhou_Daxue_(111100).jpg">
+        </div>
+
+        <div class="news-content">
+
+            <div class="news-tag">EDUCATION</div>
+
+            <h3>Fuzhou Universities
+            Strengthen Global Exchange</h3>
+
+            <p>
+                International partnerships and innovation programs
+                are helping Fuzhou become a growing educational
+                center in Southeast China.
+            </p>
+
+            <a href="#" class="read-more">
+                Read Article →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    © 2026 FUZHOU HEART · Designed in Apple Style
+</footer>
+
+</body>
+</html>

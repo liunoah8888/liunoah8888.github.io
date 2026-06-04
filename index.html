@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fuzhou Heart</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#ffffff;
+    color:#111;
+}
+
+/* NAVIGATION */
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 60px;
+
+    background:rgba(255,255,255,0.7);
+    backdrop-filter:blur(18px);
+
+    z-index:1000;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:40px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#111;
+    font-size:16px;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    opacity:0.6;
+}
+
+/* HERO */
+.hero{
+    height:100vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)),
+    url('Fuzhou_skyline.jpg');
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:110px;
+    font-weight:700;
+    letter-spacing:-4px;
+}
+
+.hero p{
+    font-size:28px;
+    margin-top:20px;
+    font-weight:300;
+}
+
+.hero button{
+    margin-top:40px;
+    padding:16px 40px;
+
+    border:none;
+    border-radius:50px;
+
+    background:white;
+    color:black;
+
+    font-size:18px;
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.hero button:hover{
+    transform:scale(1.05);
+}
+
+/* SECTION */
+.section{
+    padding:140px 10%;
+    text-align:center;
+}
+
+.section-title{
+    font-size:70px;
+    margin-bottom:20px;
+    font-weight:700;
+    letter-spacing:-2px;
+}
+
+.section-subtitle{
+    font-size:24px;
+    color:#666;
+    margin-bottom:20px;
+}
+.section button {
+    margin-bottom:20px;
+    padding:16px 40px;
+
+    border:none;
+    border-radius:50px;
+
+    background:black;
+    color:white;
+
+    font-size:18px;
+    cursor:pointer;
+
+    transition:0.3s;
+        }
+.section button:hover{
+    transform:scale(1.05);
+        }
+/* CARDS */
+.card-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:40px;
+}
+
+.card{
+    background:white;
+    border-radius:30px;
+    overflow:hidden;
+
+    box-shadow:0 10px 40px rgba(0,0,0,0.08);
+
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:40px;
+}
+
+.card-content h2{
+    font-size:32px;
+    margin-bottom:15px;
+}
+
+.card-content p{
+    color:#666;
+    line-height:1.8;
+    font-size:17px;
+}
+
+/* FEATURE SECTION */
+.feature{
+    height:90vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),
+    url('Fuzhou_Taixi_CBD.jpg');
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+    color:white;
+}
+
+.feature h1{
+    font-size:90px;
+    max-width:1000px;
+    line-height:1.1;
+}
+
+/* FOOTER */
+footer{
+    background:#f5f5f7;
+    padding:60px;
+    text-align:center;
+    color:#666;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+
+    nav{
+        padding:20px;
+    }
+
+    nav ul{
+        gap:20px;
+    }
+
+    .hero h1{
+        font-size:70px;
+    }
+
+    .hero p{
+        font-size:22px;
+    }
+
+    .section-title{
+        font-size:50px;
+    }
+
+    .feature h1{
+        font-size:50px;
+        padding:20px;
+    }
+
+}
+
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+    <div class="logo">FUZHOU</div>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#discover">Discover</a></li>
+        <li><a href="#culture">Culture</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <h1>Fuzhou</h1>
+    <p>The Heart of Fujian Province</p>
+    <button onclick="document.location='introduction.html'">Explore</button>
+</section>
+
+<!-- DISCOVER -->
+<section class="section" id="discover">
+
+    <h1 class="section-title">Discover Fuzhou</h1>
+
+    <p class="section-subtitle">
+        A city where tradition meets innovation.
+    </p>
+       <button onclick="document.location='attraction.html'">Discover</button>
+
+    <div class="card-grid">
+
+        <div class="card">
+            <img src="Fuzhou_skyline.jpg" alt="Fuzhou_skyline">
+
+            <div class="card-content">
+                <h2>Modern Skyline</h2>
+
+                <p>
+                    Explore the stunning skyline and rapid development of Fuzhou.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="Fuzhou_Taixi_CBD.jpg" alt="Fuzhou CBD">
+
+            <div class="card-content">
+                <h2>Economic Centre</h2>
+
+                <p>
+                    The political and economic heart of Fujian Province.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="Water-side_Performing_Stage_at_Yijin_Lane,_2019-09-29_20.jpg" alt="History">
+
+            <div class="card-content">
+                <h2>Historic Culture</h2>
+
+                <p>
+                    Over 2300 years of history and the birthplace of Min culture.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FEATURE -->
+<section class="feature" id="culture">
+    <h1>
+        Tradition and Technology
+        Living Together
+    </h1>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact">
+    © 2026 FUZHOU HEART · Designed in Apple Style
+</footer>
+
+</body>
+</html>
